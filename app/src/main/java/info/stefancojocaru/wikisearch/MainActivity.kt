@@ -35,6 +35,8 @@ class MainActivity : AppCompatActivity() {
         mDbWorkerThread = DbWorkerThread("dbWorkerThread")
         mDbWorkerThread.start()
 
+        mDb = SearchDatabase.getInstance(this)
+
         btn_search.setOnClickListener {
             if (edit_search.text.toString().isNotEmpty()) {
                 cautare(edit_search.text.toString())
