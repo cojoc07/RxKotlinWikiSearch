@@ -25,6 +25,18 @@
             android:layout_height="wrap_content"
             android:text="@string/button_search" />
 
+        <Button
+            android:id="@+id/btn_insertdb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Insert to DB" />
+
+        <Button
+            android:id="@+id/btn_retrievedb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Retrieve from DB" />
+
         <TextView
             android:id="@+id/txt_search_result"
             android:layout_width="match_parent"
