@@ -18,7 +18,7 @@ abstract class SearchDatabase : RoomDatabase() {
             if (INSTANCE == null) {
                 synchronized(SearchDatabase::class) {
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
-                            SearchDatabase::class.java, "weather.db")
+                            SearchDatabase::class.java, "search.db")
                             .build()
                 }
             }

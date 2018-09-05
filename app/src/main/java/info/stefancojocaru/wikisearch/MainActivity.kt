@@ -99,8 +99,7 @@ class MainActivity : AppCompatActivity() {
     //RETRIEVE FROM ROOM DATABASE
     private fun testRetrieve(){
         val task = Runnable {
-            val weatherData =
-                    mDb?.searchDao()?.getAll()
+            val weatherData = mDb?.searchDao()?.getAll()
             mUiHandler.post({
                 if (weatherData == null || weatherData?.size == 0) {
 
