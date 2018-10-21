@@ -1,16 +1,15 @@
-package info.stefancojocaru.wikisearch
+package info.stefancojocaru.wikisearch.model
 
-import android.arch.persistence.room.Entity
-import android.arch.persistence.room.PrimaryKey
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
 object Model {
     data class Result(val query: Query)
-    data class Query(val searchinfo: SearchInfo, val search: Array<Search>)
+    data class Query(val searchinfo: SearchInfo, val articles: Array<Article>)
     data class SearchInfo(val totalhits: Int)
-    data class Truck(val roti : Int)
 
-    @Entity(tableName = "search_table")
-    data class Search(
+    @Entity(tableName = "articles_table")
+    data class Article(
             @PrimaryKey(autoGenerate = true)
             val pageid: Int,
             val ns: Int,

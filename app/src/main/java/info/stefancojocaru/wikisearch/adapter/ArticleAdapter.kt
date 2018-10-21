@@ -1,15 +1,15 @@
 package info.stefancojocaru.wikisearch.adapter
 
 import android.content.Context
-import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import info.stefancojocaru.wikisearch.Model
+import androidx.recyclerview.widget.RecyclerView
 import info.stefancojocaru.wikisearch.R
+import info.stefancojocaru.wikisearch.model.Model
 import kotlinx.android.synthetic.main.card_item.view.*
 
-class SearchAdapter(val items : ArrayList<Model.Search>, val context: Context) : RecyclerView.Adapter<ViewHolder>() {
+class ArticleAdapter(val items : ArrayList<Model.Article>, val context: Context) : RecyclerView.Adapter<ViewHolder>() {
 
     override fun getItemCount(): Int {
         return items.size
