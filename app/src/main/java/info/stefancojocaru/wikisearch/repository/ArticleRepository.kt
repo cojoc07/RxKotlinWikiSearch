@@ -16,13 +16,15 @@ class ArticleRepository {
 
     fun doSearch(): MutableLiveData<List<Model.Result>> {
         WikiApiService.create().fetchArticles("query",
-                "json","search","naruto")
+                "json","search","bmw")  //last parameter represents the search query (can be passed from anywhere)
                 .enqueue(object : Callback<List<Model.Result>>{
                     override fun onFailure(call: Call<List<Model.Result>>, t: Throwable) {
 
                     }
 
-                    override fun onResponse(call: Call<List<Model.Result>>, response: Response<List<Model.Result>>) {
+                    override fun onResponse(call: Call<List<Model.Result>>, 
+                                            response: Response<List<Model.Result>>
+                                           ) {
                         allArticles.value = response.body()
                     }
                 })
